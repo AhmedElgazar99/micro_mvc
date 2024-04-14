@@ -4,6 +4,17 @@ use MVC\core\model;
 use Rakit\Validation\Rules\Email;
 
 class user extends model{
+    private static $object;
+     //++++++++++++++++ singltone++++++++++++++++++++++++
+    public  static function instance()
+    {
+
+        if (!isset(self::$object)) {
+            return self::$object = new car;
+        } else {
+            return self::$object;
+        }
+    }
 
     public function getalluser(){
         $data=model::db();
