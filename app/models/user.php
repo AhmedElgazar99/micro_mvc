@@ -10,7 +10,7 @@ class user extends model{
     {
 
         if (!isset(self::$object)) {
-            return self::$object = new car;
+            return self::$object = new user;
         } else {
             return self::$object;
         }
